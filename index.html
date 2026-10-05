@@ -750,7 +750,6 @@ h2{
   margin-top:45px
 }
 
-/* Fix: buttons were inheriting the browser's default blue text colour */
 .envelope{
   border:1px solid #eadbd3;
   background:#fff;
@@ -1143,7 +1142,13 @@ footer{
   letter-spacing:.04em
 }
 
+
+/* =========================================================
+   MOBILE LAYOUT
+   ========================================================= */
+
 @media (max-width:800px){
+
   .hero{
     padding-top:55px
   }
@@ -1215,9 +1220,42 @@ footer{
   }
 }
 
+
+/* =========================================================
+   MOBILE EDGE FRAME
+   Keeps the page visually centered while protecting the
+   decorative content near the screen edges.
+   ========================================================= */
+
 @media (max-width:520px){
+
+  body{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  body:before,
+  body:after{
+    content:"";
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:rgba(210,105,125,.20);
+    pointer-events:none;
+    z-index:150;
+  }
+
+  body:before{
+    left:6px;
+  }
+
+  body:after{
+    right:6px;
+  }
+
   .wrap{
-    width:calc(100% - 32px);
+    width:100%;
     max-width:none;
     margin-left:auto;
     margin-right:auto;
@@ -1229,11 +1267,11 @@ footer{
     padding-left:0;
     padding-right:0;
     width:100%;
-    overflow:hidden;
+    overflow:visible;
   }
 
   .hero-grid{
-    width:calc(100% - 32px);
+    width:100%;
     max-width:none;
     margin-left:auto;
     margin-right:auto;
@@ -1277,7 +1315,7 @@ footer{
     max-width:100%;
     min-width:0;
     margin-inline:auto;
-    overflow:hidden;
+    overflow:visible;
   }
 
   .photo-card.one{
@@ -1369,6 +1407,11 @@ footer{
   .film-copy{
     min-width:0;
     max-width:100%;
+  }
+
+  footer{
+    padding-left:10px;
+    padding-right:10px;
   }
 }
 
@@ -1483,7 +1526,6 @@ footer{
       </h2>
 
       <div class="reel">
-        <!-- Fixed: relative paths for GitHub Pages deployment -->
         <img src="img/1.jpeg" alt="">
         <img src="img/2.jpeg" alt="">
         <img src="img/3.jpeg" alt="">
