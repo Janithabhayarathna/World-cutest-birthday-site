@@ -1151,7 +1151,16 @@ footer{
   .hero-grid,
   .film,
   .voice{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
+    min-width:0;
+    width:100%;
+  }
+
+  .hero-grid > *,
+  .film > *,
+  .voice > *{
+    min-width:0;
+    max-width:100%;
   }
 
   .hero-grid{
@@ -1163,12 +1172,15 @@ footer{
   .hero-copy,
   .film-copy,
   .voice > div{
-    width:100%
+    width:100%;
+    min-width:0;
   }
 
   .photo-stage{
     height:480px;
-    width:100%
+    width:100%;
+    min-width:0;
+    margin-inline:auto
   }
 
   .photo-card.one{
@@ -1185,11 +1197,13 @@ footer{
   }
 
   .reasons-grid{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr 1fr;
+    min-width:0;
   }
 
   .open-grid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
+    min-width:0;
   }
 
   .section{
@@ -1204,22 +1218,38 @@ footer{
 @media (max-width:520px){
   .wrap{
     width:calc(100% - 32px);
-    margin-inline:auto
+    max-width:none;
+    margin-left:auto;
+    margin-right:auto;
+    min-width:0;
   }
 
   .hero{
     padding-top:55px;
     padding-left:0;
-    padding-right:0
+    padding-right:0;
+    width:100%;
+    overflow:hidden;
   }
 
   .hero-grid{
     width:calc(100% - 32px);
-    margin-inline:auto
+    max-width:none;
+    margin-left:auto;
+    margin-right:auto;
+    min-width:0;
+  }
+
+  .hero-grid > *,
+  .film > *,
+  .voice > *{
+    min-width:0;
+    max-width:100%;
   }
 
   .hero-copy{
     width:100%;
+    min-width:0;
     text-align:center
   }
 
@@ -1232,7 +1262,8 @@ footer{
   }
 
   .hero h1{
-    font-size:4.2rem
+    font-size:4.2rem;
+    max-width:100%;
   }
 
   .hero-actions{
@@ -1243,7 +1274,10 @@ footer{
   .photo-stage{
     height:410px;
     width:100%;
-    margin-inline:auto
+    max-width:100%;
+    min-width:0;
+    margin-inline:auto;
+    overflow:hidden;
   }
 
   .photo-card.one{
@@ -1259,15 +1293,31 @@ footer{
   }
 
   .reasons-grid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
+    width:100%;
+    min-width:0;
+  }
+
+  .reason{
+    min-width:0;
+    max-width:100%;
   }
 
   .birthday-card{
-    padding:55px 18px
+    padding:55px 18px;
+    width:100%;
+    max-width:100%;
+  }
+
+  .letter{
+    width:100%;
+    max-width:100%;
+    min-width:0;
   }
 
   .letter-paper{
-    padding:48px 24px
+    padding:48px 24px;
+    max-width:100%;
   }
 
   .letter-paper:before{
@@ -1275,7 +1325,9 @@ footer{
   }
 
   .game-card{
-    padding:25px 18px
+    padding:25px 18px;
+    width:100%;
+    max-width:100%;
   }
 
   .game-area{
@@ -1283,16 +1335,40 @@ footer{
   }
 
   .open-grid{
-    width:100%
+    width:100%;
+    min-width:0;
   }
 
   .envelope{
     width:100%;
+    max-width:100%;
     color:var(--ink);
   }
 
   .envelope h3{
     color:#4b3d39;
+  }
+
+  .voice{
+    width:100%;
+    min-width:0;
+  }
+
+  .voice-player{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+
+  .film{
+    width:100%;
+    min-width:0;
+  }
+
+  .film-frame,
+  .film-copy{
+    min-width:0;
+    max-width:100%;
   }
 }
 
